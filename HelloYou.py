@@ -43,7 +43,7 @@ while True:
     # If else statement
     while True:
         answer = raw_input("Do you want to restart this program" + " " + naam[0] .upper() + naam[1:].lower() + " " + achternaam[0] .upper() + achternaam[1:].lower() + "? [y/n]: ")
-        if answer in ('y', 'n'):
+        if answer in ('y', 'Y') or ('n', 'N'):
             break
         print('Invalid input.')
     if answer == 'y':
