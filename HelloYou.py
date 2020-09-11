@@ -29,15 +29,37 @@ time.sleep(2.4)
 datum = time.asctime()
 print("the current time is:", datum)
 
-time.sleep(1.9)
+time.sleep(2.1)
 
 os.system('cls')
+
+raw_input=input
+
+while True:
+    # If else statement
+    while True:
+        answer = raw_input("Did you eat breakfast today" + " " + naam[0] .upper() + naam[1:].lower() + " " + achternaam[0] .upper() + achternaam[1:].lower() + "? [y/n]: ")
+        if answer in ('y', 'Y') or ('n', 'N'):
+            break
+        print('Invalid input.')
+    if answer == 'y':
+        print("Wonderful, remember that breakfast is the most important meal of the day!")
+        time.sleep(2.2)
+        os.system("cls")
+        break
+    else:
+        print("Oh that's a shame don't forget that breakfast is the most important meal of the day!")
+        time.sleep(2.2)
+        os.system("cls")
+        break
+
+
 
 from tqdm import tqdm
 for i in tqdm(range(0, 100), desc="Loading", unit="bit"): 
     time.sleep(0.04)
 
-raw_input = input
+
 
 while True:
     # If else statement
