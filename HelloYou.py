@@ -58,6 +58,8 @@ while True:
 from tqdm import tqdm
 for i in tqdm(range(0, 100), desc="Loading", unit="bit"): 
     time.sleep(0.04)
+time.sleep(0.8)
+os.system("cls")
 
 
 
