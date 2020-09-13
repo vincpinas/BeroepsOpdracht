@@ -41,17 +41,18 @@ while True:
         answer = raw_input("Did you eat breakfast today" + " " + naam[0] .upper() + naam[1:].lower() + " " + achternaam[0] .upper() + achternaam[1:].lower() + "? [y/n]: ")
         if answer in ('y', 'Y') or ('n', 'N'):
             break
-        print('Invalid input.')
-    if answer == 'y':
+    if answer == 'y' or answer == 'Y':
         print("Wonderful, remember that breakfast is the most important meal of the day!")
         time.sleep(2.2)
         os.system("cls")
         break
-    else:
+    elif answer == 'n' or answer == 'N':
         print("Oh that's a shame don't forget that breakfast is the most important meal of the day!")
         time.sleep(2.2)
         os.system("cls")
         break
+    else:
+        print('Invalid input.')
 
 
 
@@ -69,14 +70,16 @@ while True:
         answer = raw_input("Do you want to restart this program" + " " + naam[0] .upper() + naam[1:].lower() + " " + achternaam[0] .upper() + achternaam[1:].lower() + "? [y/n]: ")
         if answer in ('y', 'Y') or ('n', 'N'):
             break
-        print('Invalid input.')
-    if answer == 'y':
+    if answer == 'y' or answer == 'Y':
         os.system("cls")
         time.sleep(1)
         os.system("HelloYou.py")
-    else:
+    elif answer == 'n' or answer == 'N':
         print('Goodbye :(')
         time.sleep(1.6)
         os.system("taskkill /IM cmd.exe")
         break
+    else:
+        print('Invalid input.')
+
         
