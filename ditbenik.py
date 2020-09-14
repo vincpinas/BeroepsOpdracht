@@ -190,5 +190,3 @@ while True:
         break
     else:
         print('Invalid input.')
-
-        
