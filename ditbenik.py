@@ -67,10 +67,10 @@ os.system("cls")
 while True:
     # Question A
     while True:
-        print("Before I came to Media College Amsterdam I went to....")
+        print("Before I came to Media College Amsterdam I went to")
         print("A: Veenlanden College Mijdrecht.")
         print("B: Alkwin College.")
-        print("C: Amstelveen College")
+        print("C: Amstelveen College.")
         answer = raw_input("Pick one option" + " " + naam[0] .upper() + naam[1:].lower() + " " + "[A/B/C]: ")
         if answer in ('a', 'A') or ('b', 'B') or ('c', 'C'):
             break
@@ -84,60 +84,81 @@ while True:
         break
     elif answer == 'c' or answer == 'C':
         time.sleep(0.3)
-        print("This was one of my first options but I didn't actually go there.")
+        print("No, this was one of my first options but I didn't actually go there.")
         break
     else:
         print("Invalid input.")
 
-time.sleep(2)
+time.sleep(4.5)
+print("Let's move on.")
+time.sleep(1.3)
 os.system("cls")
+
 
 while True:
     # Question B
     while True:
+        print("When I finish school I want to become a")
+        print("A: Data Architect.")
+        print("B: Security Engineer.")
+        print("C: Media Developer.")
         answer = raw_input("Pick one option" + " " + naam[0] .upper() + naam[1:].lower() + " " + "[A/B/C]: ")
         if answer in ('a', 'A') or ('b', 'B') or ('c', 'C'):
             break
     if answer == 'a' or answer == 'A':
         time.sleep(0.3)
-        print(".")
+        print("My father did this job but I'm not really interested in programming languages like php.")
         break
     elif answer == 'b' or answer == 'B':
         time.sleep(0.3)
-        print(".")
+        print("This seems interesting but that's not what I picked this course for.")
         break
     elif answer == 'c' or answer == 'C':
         time.sleep(0.3)
-        print(".")
+        print("YES! Media Development seems really fun to me although I have yet to see what it's actually like working as a Media developer.")
         break
     else:
         print("Invalid input.")
 
-time.sleep(2)
+time.sleep(4.5)
+print("Alright, last question.")
+time.sleep(1.3)
 os.system("cls")
 
 while True:
     # Question C
     while True:
+        print("I live in")
+        print("A: Uithoorn.")
+        print("B: Amstelveen.")
+        print("C: Amsterdam.")
         answer = raw_input("Pick one option" + " " + naam[0] .upper() + naam[1:].lower() + " " + "[A/B/C]: ")
         if answer in ('a', 'A') or ('b', 'B') or ('c', 'C'):
             break
     if answer == 'a' or answer == 'A':
         time.sleep(0.3)
-        print(".")
+        print("YES! I live in Uithoorn right now and have lived here for about 7 years now.")
         break
     elif answer == 'b' or answer == 'B':
         time.sleep(0.3)
-        print(".")
+        print("I have lived here, before my parents got seperated.")
         break
     elif answer == 'c' or answer == 'C':
         time.sleep(0.3)
-        print(".")
+        print("No, I have never lived here before and I think I wouldn't want to live here either.")
         break
     else:
         print("Invalid input.")
 
-time.sleep(2)
+time.sleep(4.5)
+print("That's all folks.")
+time.sleep(3)
+print("You can go now..")
+time.sleep(2.6)
+print("Or do you want to stay?")
+time.sleep(2.6)
+print("I'll give you a choice now.")
+time.sleep(1.8)
 os.system("cls")
 
 
@@ -148,7 +169,6 @@ from tqdm import tqdm
 for i in tqdm(range(0, 100), desc="Loading", unit="bit"): 
     time.sleep(0.04)
 time.sleep(0.8)
-os.system("cls")
 
 
 while True:
@@ -158,6 +178,8 @@ while True:
         if answer in ('y', 'Y') or ('n', 'N'):
             break
     if answer == 'y' or answer == 'Y':
+        print("Alright, NICE.")
+        time.sleep(1)
         os.system("cls")
         time.sleep(1)
         os.system("ditbenik.py")
