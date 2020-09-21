@@ -150,6 +150,48 @@ while True:
     else:
         print("Invalid input.")
 
+time.sleep(2.8)
+os.system("cls")
+
+while True:
+    # KuezeVraag1
+    while True:
+        print("Now it's your turn, tell me a litte about yourself")
+        answer = raw_input("How was your day" + " " + naam[0] .upper() + naam[1:].lower() + "? ")
+        if answer in ('bad', 'Bad') or ('idk', 'IDK') or ('good', 'GOOD'):
+            break
+    if answer == 'bad' or answer == 'Bad':
+        time.sleep(0.3)
+        input("I see, do you want to talk about it?. ")
+        break
+    elif answer == 'idk' or answer == 'IDK':
+        time.sleep(0.3)
+        print("I see, then we will not talk about it any further?")
+        break
+    elif answer == 'good' or answer == 'GOOD':
+        time.sleep(0.3)
+        input("Oh, that's quite nice to hear, tell me more! ")
+        break
+    else:
+        print("I don't know how to respond to that please respond with either: 'bad', 'idk' or good.")
+
+
+if answer == 'bad' or answer == 'Bad':
+    print("Oh, that's quite sad to hear.")
+    time.sleep(1)
+    input("You know what always helps me?")
+    print("It always helps when I listen to some music and just get some rest.")
+    time.sleep(1)
+    print("You should go and do that")
+
+elif answer == 'good' or answer == 'GOOD':
+    print("Oh that's always good to hear")
+    time.sleep(1)
+    input("Anything else you want to add?")
+    time.sleep(0.7)
+    print("Nice, nice anyways.")
+
+
 time.sleep(4.5)
 print("That's all folks.")
 time.sleep(3)
