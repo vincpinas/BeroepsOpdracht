@@ -175,7 +175,6 @@ while True:
     else:
         print("I don't know how to respond to that please respond with either: 'bad', 'idk' or good.")
 
-
 if answer == 'bad' or answer == 'Bad':
     print("Oh, that's quite sad to hear.")
     time.sleep(1)
