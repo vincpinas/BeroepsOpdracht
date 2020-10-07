@@ -1,4 +1,6 @@
 import time, sys, os
+respect = 0
+maximumRespect = 330
 
 welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?"
 for char in welcome:
@@ -45,13 +47,15 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe hebt je aangesloten bij het verzet en hebt andere mensen met een gelijke mening gevonden nu.\033[0;37;40m"
-        time.sleep(1.3)
+        message = "\033[2;33;40mJe hebt je aangesloten bij het verzet en hebt andere mensen met een gelijke mening gevonden. RESPECT +80\033[0;37;40m"
+        respect = respect + 80
+        time.sleep(1.5)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt ervoor gekozen om niks te doen maar wordt nog steeds opgepakt voor verdenking van verzet, wanneer je vrij komt ga je ook echt het verzet in.\033[0;37;40m"
-        time.sleep(1.3)
+        message = "\033[2;33;40mJe hebt ervoor gekozen om niks te doen maar wordt nog steeds opgepakt voor verdenking van verzet, wanneer je vrij komt ga je het verzet in.\nRESPECT -20\033[0;37;40m"
+        respect = respect - 20
+        time.sleep(1.5)
         os.system("cls")
         break
     else:
@@ -70,12 +74,14 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe probeert hem te redden, maar nu word je zelf ook opgepakt en dagelijks gemarteld en vaak in isolatie gestopt.\033[0;37;40m"
+        message = "\033[2;33;40mJe probeert hem te redden, maar nu word je zelf ook opgepakt, dagelijks gemarteld en in isolatie gestopt. RESPECT +100\033[0;37;40m"
+        respect = respect + 100
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe bent nog even vrij maar op een dag word je verraden door je kamerraad die is opgepakt en word je nu zelf ook in de gevangenis gegooid om gemarteld te worden.\033[0;37;40m"
+        message = "\033[2;33;40mJe bent nog even vrij, maar op een dag word je verraden door de kamerraad die was opgepakt en word je nu zelf ook in de gevangenis gegooid. RESPECT -50\033[0;37;40m"
+        respect = respect - 50
         time.sleep(1.3)
         os.system("cls")
         break
@@ -95,7 +101,8 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe hebt besloten in een groep sterk te staan en zelfs van uit de gevangenis door proberen te vechten je hebt hier door het respect van velen verdiend en overleefd het voor nu.\033[0;37;40m"
+        message = "\033[2;33;40mJe hebt besloten in een groep sterk te staan en van uit de gevangenis door proberen te vechten voor je rechten je hebt hier door het respect van velen verdiend en overleefd het voor nu. RESPECT +100\033[0;37;40m"
+        respect = respect + 100
         time.sleep(1)
         os.system("cls")
         for char in message:
@@ -155,12 +162,14 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mDe andere bewakers komen hem helpen waarna je in isolatie wordt gegooid voor de volgende paar maanden. \033[0;37;40m"
+        message = "\033[2;33;40mDe andere bewakers komen hem helpen waarna je in isolatie wordt gegooid voor de volgende paar maanden. RESPECT +50\033[0;37;40m"
+        respect = respect + 50
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt geluk en de andere bewakers komen laat om je te helpen maar je overleeft het wel. \033[0;37;40m"
+        message = "\033[2;33;40mJe hebt geluk en de andere bewakers komen laat om je te helpen maar je overleeft het wel. RESPECT +40\033[0;37;40m"
+        respect = respect + 40
         time.sleep(1.3)
         os.system("cls")
         break
@@ -172,3 +181,10 @@ for char in message:
     time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
+
+respectPrint = "Respect: " + str(respect) + " / " + str(maximumRespect)
+for char in respectPrint:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.04)
+time.sleep(5)
