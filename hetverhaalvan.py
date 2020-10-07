@@ -14,7 +14,13 @@ for char in welcome:
     sys.stdout.flush()
     time.sleep(0.05)
 time.sleep(0.8)
-welcome = "\nLet's start.."
+welcome = "\nDit verhaal is gebaseerd op het verhaal van Akram, een vluchteling uit Iran, je kunt haar verhaal bekijken op https://vluchtelingenwerk.nl"
+for char in welcome:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.05)
+time.sleep(1.7)
+welcome = "\nLaten we maar beginnen."
 for char in welcome:
     sys.stdout.write(char)
     sys.stdout.flush()
