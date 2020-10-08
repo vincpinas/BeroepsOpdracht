@@ -1,6 +1,6 @@
 import time, sys, os
 respect = 0
-maximumRespect = 330
+maximumRespect = 375
 
 welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?"
 for char in welcome:
@@ -94,10 +94,10 @@ for char in message:
 time.sleep(1)
 os.system("cls")
 
-#Question 3 Loop
+#Question 3 Loop (death)
 while True:
     while True:
-        answer = input("[3] Deze gevangenis is geen vriendelijke plek, je wordt hier dagelijks gemarteld, uit gescholden en je ziet hier ook zelfs kinderen zonder pardon vermoord worden. Je bent nu in de gevangenis. Je besluit om......\n\033[2;33;40m1. Van uit de gevangenis door te vechten.\n2. Opgeven\n\033[0;37;40mKeuze: ")
+        answer = input("[3] Deze gevangenis is geen vriendelijke plek, je wordt hier dagelijks gemarteld, uit gescholden en je ziet hier ook zelfs kinderen zonder pardon vermoord worden. Je bent nu in de gevangenis. Je besluit om...\n\033[2;33;40m1. Van uit de gevangenis door te vechten.\n2. Opgeven\n\033[0;37;40mKeuze: ")
         if answer in ('1') or ('2'):
             break
     if answer == '1':
@@ -139,7 +139,7 @@ while True:
                 time.sleep(0.8)
                 os.system("cls")
                 time.sleep(1)
-                os.system("eindopdracht.py")
+                os.system("py hetverhaalvan.py")
             elif restart == "2":
                 closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
                 for char in closeMessage:
@@ -182,9 +182,126 @@ for char in message:
 time.sleep(1)
 os.system("cls")
 
+#Question 5 Loop (death)
+while True:
+    while True:
+        answer = input("[5] Na 8 jaar in de gevangenis word je spontaan geblinddoekt door een aantal bewakers en naar buiten genomen bang voor je leven besluit je om...\n\033[2;33;40m1. Jezelf los proberen te worstelen.\n2. Het gewoon te laten gebeuren.\n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
+            break
+    if answer == '1':
+        message = "\033[2;33;40mBang voor je leven probeerde je jezelf los te worstelen, de bewakers schrikken zich en uit schok schieten ze je neer, je verhaal eindigt hier.\033[0;37;40m"
+        time.sleep(1.3)
+        os.system("cls")
+        for char in message:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.04)
+        end = "\n\033[2;31;40mJammer genoeg is je verhaal hier al afgelopen, bedankt voor het spelen."
+        for char in end:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.07)
+        while True:
+            while True:
+                restart = input("\n\033[2;31;40m1. Restart\n2. Sluit af\n: \033[0;37;40m")
+                if restart in ("1") or ("2"):
+                    break
+            if restart == "1":
+                restartMessage = "\033[2;33;40mLaten we het weer proberen!\033[0;37;40m"
+                for char in restartMessage:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(0.07)
+                time.sleep(0.8)
+                os.system("cls")
+                time.sleep(1)
+                os.system("py hetverhaalvan.py")
+            elif restart == "2":
+                closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
+                for char in closeMessage:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(0.07)
+                time.sleep(0.6)
+                os.system("taskkill /IM cmd.exe")
+                break
+        break
+    elif answer == '2':
+        message = "\033[2;33;40mDe bewakers namen je mee naar buiten de gevangenis, hier doen ze de blinddoek af en word je naar buiten geduwd. Je bent nu weer uit de gevangenis. RESPECT +30\033[0;37;40m"
+        respect = respect + 30
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+for char in message:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.04)
+time.sleep(1)
+os.system("cls")
+
+#Question 6 Loop (death)
+while True:
+    while True:
+        answer = input("[5] Je bent nu net weer vrij op de straat en je moet snel een keuzen maken, blijf of vlucht. Je besluit om...\n\033[2;33;40m1. Blijf in Iran \n2. Vlucht\n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
+            break
+    if answer == '1':
+        message = "\033[2;33;40mJe hebt besloten om in Iran te blijven wonen, maar dit was niet een slimme keuze. Nog altijd onderdrukt en in gevaar krijg je hierna niet meer de kans om het land te verlaten en ga je hier op een vroege leeftijd al dood.\033[0;37;40m"
+        time.sleep(1.3)
+        os.system("cls")
+        for char in message:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.04)
+        end = "\n\033[2;31;40mJammer genoeg is je verhaal hier al afgelopen, bedankt voor het spelen."
+        for char in end:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.07)
+        while True:
+            while True:
+                restart = input("\n\033[2;31;40m1. Restart\n2. Sluit af\n: \033[0;37;40m")
+                if restart in ("1") or ("2"):
+                    break
+            if restart == "1":
+                restartMessage = "\033[2;33;40mLaten we het weer proberen!\033[0;37;40m"
+                for char in restartMessage:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(0.07)
+                time.sleep(0.8)
+                os.system("cls")
+                time.sleep(1)
+                os.system("py hetverhaalvan.py")
+            elif restart == "2":
+                closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
+                for char in closeMessage:
+                    sys.stdout.write(char)
+                    sys.stdout.flush()
+                    time.sleep(0.07)
+                time.sleep(0.6)
+                os.system("taskkill /IM cmd.exe")
+                break
+        break
+    elif answer == '2':
+        message = "\033[2;33;40mJe hebt besloten om naar een veilig land te vluchten, de trip zal moeilijk worden. RESPECT +15 \033[0;37;40m"
+        respect = respect + 15
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+for char in message:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.04)
+time.sleep(1)
+os.system("cls")
+
 respectPrint = "Respect: " + str(respect) + " / " + str(maximumRespect)
 for char in respectPrint:
     sys.stdout.write(char)
     sys.stdout.flush()
     time.sleep(0.04)
-time.sleep(5)
