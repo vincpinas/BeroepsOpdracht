@@ -1,6 +1,6 @@
 import time, sys, os
 respect = 0
-maximumRespect = 375
+maximumRespect = 465
 
 welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?"
 for char in welcome:
@@ -43,6 +43,7 @@ os.system("cls")
 #Question 1 Loop
 while True:
     while True:
+        os.system("cls")
         answer = input("[1] De Sjah werd kortgeleden afgezet in Iran, maar is nu een nieuw regime onder de naam van Ayatollah Khomein die veel aan onderdrukking doet en de mensen bang maakt.\nJe besluit om...\n\033[2;33;40m1. Aan te sluiten bij het verzet.\n2. Niks te doen.\n\033[0;37;40mkeuze: ")
         if answer in ('1') or ('2'):
             break
@@ -60,6 +61,7 @@ while True:
         break
     else:
         print('Invalid input.')
+        time.sleep(0.7)
 for char in message:
     sys.stdout.write(char)
     sys.stdout.flush()
@@ -70,6 +72,7 @@ os.system("cls")
 #Question 2 Loop
 while True:
     while True:
+        os.system("cls")
         answer = input("[2]Een van je kamerraden wordt op straat op gepakt tijdens een protest door Iraanse soldaten je weet zelf ook al dat hij daar gemarteld zal worden in een kamp voor informatie. Je besluit om...\n\033[2;33;40m1. Hem proberen te redden.\n2. Hem te vergeten en doorgaan met protesteren.\033[0;37;40m\nKeuze: ")
         if answer in ('1') or ('2'):
             break
@@ -87,6 +90,7 @@ while True:
         break
     else:
         print('Invalid input.')
+        time.sleep(0.7)
 for char in message:
     sys.stdout.write(char)
     sys.stdout.flush()
@@ -97,6 +101,7 @@ os.system("cls")
 #Question 3 Loop (death)
 while True:
     while True:
+        os.system("cls")
         answer = input("[3] Deze gevangenis is geen vriendelijke plek, je wordt hier dagelijks gemarteld, uit gescholden en je ziet hier ook zelfs kinderen zonder pardon vermoord worden. Je bent nu in de gevangenis. Je besluit om...\n\033[2;33;40m1. Van uit de gevangenis door te vechten.\n2. Opgeven\n\033[0;37;40mKeuze: ")
         if answer in ('1') or ('2'):
             break
@@ -154,10 +159,12 @@ while True:
         break
     else:
         print('Invalid input.')
+        time.sleep(0.7)
 
 #Question 4 Loop
 while True:
     while True:
+        os.system("cls")
         answer = input("[4] Je raakt in een argument met een van de soldaten die in de gevangenis werkt en hij begint je te slaan, omdat hij boos wordt. Je ziet dat niemand je helpt, je besluit om... \n\033[2;33;40m1. Terug te vechten \n2. Wachten tot hij klaar is en hopen dat hij niet te ver gaat\n\033[0;37;40mkeuze: ")
         if answer in ('1') or ('2'):
             break
@@ -175,6 +182,7 @@ while True:
         break
     else:
         print('Invalid input.')
+        time.sleep(0.7)
 for char in message:
     sys.stdout.write(char)
     sys.stdout.flush()
@@ -185,6 +193,7 @@ os.system("cls")
 #Question 5 Loop (death)
 while True:
     while True:
+        os.system("cls")
         answer = input("[5] Na 8 jaar in de gevangenis word je spontaan geblinddoekt door een aantal bewakers en naar buiten genomen bang voor je leven besluit je om...\n\033[2;33;40m1. Jezelf los proberen te worstelen.\n2. Het gewoon te laten gebeuren.\n\033[0;37;40mkeuze: ")
         if answer in ('1') or ('2'):
             break
@@ -234,6 +243,7 @@ while True:
         break
     else:
         print('Invalid input.')
+        time.sleep(0.7)
 for char in message:
     sys.stdout.write(char)
     sys.stdout.flush()
@@ -244,7 +254,8 @@ os.system("cls")
 #Question 6 Loop (death)
 while True:
     while True:
-        answer = input("[5] Je bent nu net weer vrij op de straat en je moet snel een keuzen maken, blijf of vlucht. Je besluit om...\n\033[2;33;40m1. Blijf in Iran \n2. Vlucht\n\033[0;37;40mkeuze: ")
+        os.system("cls")
+        answer = input("[6] Je bent nu net weer vrij op de straat en je moet snel een keuzen maken, blijf of vlucht. Je besluit om...\n\033[2;33;40m1. Blijf in Iran \n2. Vlucht\n\033[0;37;40mkeuze: ")
         if answer in ('1') or ('2'):
             break
     if answer == '1':
@@ -293,6 +304,66 @@ while True:
         break
     else:
         print('Invalid input.')
+        time.sleep(0.7)
+for char in message:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.04)
+time.sleep(1)
+os.system("cls")
+
+#Question 7 Loop
+while True:
+    while True:
+        os.system("cls")
+        answer = input("[7] Je bent op de vlucht, er zijn een paar opties om het land uit te komen maar niks is zeker, je besluit om...\n\033[2;33;40m1. Met de auto te gaan\n2. Met een klein bootje aan de kust te gaan\n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
+            break
+    if answer == '1':
+        message = "\033[2;33;40mDe auto wordt aan de grens kort geïnspecteerd, gelukkig kijken ze niet naar wat erin zit en krijgen de smokkelaars je buiten het land. RESPECT +60\033[0;37;40m"
+        respect = respect + 60
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answer == '2':
+        message = "\033[2;33;40mDe boot is heel krap met de hoeveelheid vluchtelingen die hetzelfde idee hadden, je besluit in een hoekje van de boot de te gaan zitten waar nu nog de meeste ruimte is. RESPECT +90\033[0;37;40m"
+        respect = respect + 90
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+for char in message:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.04)
+time.sleep(1)
+os.system("cls")
+
+#Question 8 Loop
+while True:
+    while True:
+        os.system("cls")
+        answer = input("[8] Je komt net in Nederland aan en wordt in een asiel kamp geplaatst, je hebt hier voor de volgende 6 dagen een periode rust voordat je een gesprek hebt, in de tussen tijd besluit je om...\n\033[2;33;40m1. Een groep mensen zoeken om mee om te gaan in het kamp.\n2. Je omgeving verkennen.\n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
+            break
+    if answer == '1':
+        message = "\033[2;33;40mJe zoekt een groep van mensen waar mee je kan praten en die vertellen de omstandigheden in het kamp waar je je nu bevindt. RESPECT +20\033[0;37;40m"
+        respect = respect + 20
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answer == '2':
+        message = "\033[2;33;40mJe verkent je omgeving en je komt erachter dat het kamp te vol zit met vluchtelingen en dat het veilig is maar helemaal niet goed, je ziet zelfs een paar ratten rondlopen. RESPECT +20\033[0;37;40m"
+        respect = respect + 20
+        respect = respect 
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
 for char in message:
     sys.stdout.write(char)
     sys.stdout.flush()
