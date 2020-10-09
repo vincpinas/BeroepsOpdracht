@@ -127,64 +127,93 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-#Question [3] -2 Follow up Question (escape death or not) 
-while True:
+#Question [3] -2 Follow up Question (escape death or not)
+if answer == '2': 
     while True:
-        if answer == '2':
-            answer2 = input("Een man ziet dat je het hebt op gegeven en wilt je zijn hulp verlenen, je besluit om...\n\033[2;33;40m1. Accepteren.\n2. Weigeren\n\033[0;37;40mKeuze: ")
+        while True:
+            answer2 = input("Een man(Bahram) ziet dat je het hebt op gegeven en wilt je zijn hulp verlenen, je besluit om...\n\033[2;33;40m1. Accepteren.\n2. Weigeren\n\033[0;37;40mKeuze: ")
             if answer2 in ('1') or ('2'):
                 break
-    if answer2 == '1':
-        message = "\033[2;33;40mJe accepteert de mans hulp en houd jezelf sterk. RESPECT +10\033[0;37;40m"
-        for char in message:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.04)
-        respect = respect + 10
-        time.sleep(1.3)
-        os.system("cls")
-        break
-    elif answer2 == '2':
-        message = "\033[2;33;40mJe weigert de man zijn hulp, hij loopt weg terwijl hij zijn hoofd schudt. Je hebt het nu totaal opgegeven en zal hier dood gaan.\033[0;37;40m"
-        for char in message:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.04)
-            # RESTART
-        while True:
+        if answer2 == '1':
+            message = "\033[2;33;40mJe accepteert de mans hulp en houd jezelf sterk. RESPECT +10\033[0;37;40m"
+            for char in message:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.04)
+            respect = respect + 10
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        elif answer2 == '2':
+            message = "\033[2;33;40mJe weigert de man zijn hulp, hij loopt weg terwijl hij zijn hoofd schudt. Je hebt het nu totaal opgegeven en zal hier dood gaan.\033[0;37;40m"
+            for char in message:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.04)
+                # RESTART
             while True:
-                if answer2 == '2':
-                    restart = input("\n\033[2;31;40m1. Restart\n2. Sluit af\n: \033[0;37;40m")
-                    if restart in ("1") or ("2"):
-                        break
-            if restart == "1":
-                restartMessage = "\033[2;33;40mLaten we het weer proberen!\033[0;37;40m"
-                for char in restartMessage:
-                    sys.stdout.write(char)
-                    sys.stdout.flush()
-                    time.sleep(0.07)
-                time.sleep(0.8)
-                os.system("cls")
-                time.sleep(1)
-                os.system("py hetverhaalvanAkram.py")
-            elif restart == "2":
-                closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
-                for char in closeMessage:
-                    sys.stdout.write(char)
-                    sys.stdout.flush()
-                    time.sleep(0.07)
-                time.sleep(0.6)
-                os.system("taskkill /IM cmd.exe")
+                while True:
+                    if answer2 == '2':
+                        restart = input("\n\033[2;31;40m1. Restart\n2. Sluit af\n: \033[0;37;40m")
+                        if restart in ("1") or ("2"):
+                            break
+                if restart == "1":
+                    restartMessage = "\033[2;33;40mLaten we het weer proberen!\033[0;37;40m"
+                    for char in restartMessage:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(0.07)
+                    time.sleep(0.8)
+                    os.system("cls")
+                    time.sleep(1)
+                    os.system("py hetverhaalvanAkram.py")
+                elif restart == "2":
+                    closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
+                    for char in closeMessage:
+                        sys.stdout.write(char)
+                        sys.stdout.flush()
+                        time.sleep(0.07)
+                    time.sleep(0.6)
+                    os.system("taskkill /IM cmd.exe")
+                    break
+                else:
+                    print('Invalid input.')
+                    time.sleep(0.7)
+                    os.system("cls")
+            break
+        else:
+            print('Invalid Input')
+            time.sleep(1.3)  
+#Question [3 -2] Follow up (uitbreiding)
+if answer == '2' and answer2 == '1':
+    while True:
+        while True:
+            answer3 = input("Terwijl Bahram je door de gevangenis leidt en verteld hoe alles werkt komen jullie langs een groepje dat jullie vies aan kijkt, je besluit om...\n\033[2;33;40m1. Hun aan te spreken \n2. Negeren\n\033[0;37;40mkeuze: ")
+            if answer in ('1') or ('2'):
                 break
-            else:
-                print('Invalid input.')
-                time.sleep(0.7)
-                os.system("cls")
-        break
-    else:
-        print('Invalid Input')
-        time.sleep(1.3)  
-
+        if answer3 == '1':
+            message = "\033[2;33;40mJe spreekt hun aan en meteen beginnen ze terug te praten, er breekt een gevecht uit en de bewaking moet komen. RESPECT -10\033[0;37;40m"
+            for char in message:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.04)
+            respect = respect - 10
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        elif answer3 == '2':
+            message = "\033[2;33;40mJe houd je zelf rustig en houd rekening met waar je bent. RESPECT +30\033[0;37;40m"
+            for char in message:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.04)
+            respect = respect + 30
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        else:
+            print('Invalid input.')
+            time.sleep(0.7)
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 4 Loop
 while True:
