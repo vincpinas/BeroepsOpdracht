@@ -98,7 +98,7 @@ for char in message:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 3 Loop (death)
+#Question 3 Loop (death "maybe")
 while True:
     while True:
         os.system("cls")
@@ -118,23 +118,45 @@ while True:
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt het net als vele anderen vooral jongere mensen opgegeven en gaat helaas zonder pardon dood in gevangenis, je verhaal eindigt hier.\033[0;37;40m"
-        time.sleep(1.3)
-        os.system("cls")
+        message = "\033[2;33;40mJe hebt het opgegeven en dat straal je ook uit.\033[0;37;40m\n"
         for char in message:
             sys.stdout.write(char)
             sys.stdout.flush()
             time.sleep(0.04)
-        end = "\n\033[2;31;40mJammer genoeg is je verhaal hier al afgelopen, bedankt voor het spelen."
-        for char in end:
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+#Question [3] -2 Follow up Question (escape death or not) 
+while True:
+    while True:
+        if answer == '2':
+            answer2 = input("Een man ziet dat je het hebt op gegeven en wilt je zijn hulp verlenen, je besluit om...\n\033[2;33;40m1. Accepteren.\n2. Weigeren\n\033[0;37;40mKeuze: ")
+            if answer2 in ('1') or ('2'):
+                break
+    if answer2 == '1':
+        message = "\033[2;33;40mJe accepteert de mans hulp en houd jezelf sterk. RESPECT +10\033[0;37;40m"
+        for char in message:
             sys.stdout.write(char)
             sys.stdout.flush()
-            time.sleep(0.07)
+            time.sleep(0.04)
+        respect = respect + 10
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answer2 == '2':
+        message = "\033[2;33;40mJe weigert de man zijn hulp, hij loopt weg terwijl hij zijn hoofd schudt. Je hebt het nu totaal opgegeven en zal hier dood gaan.\033[0;37;40m"
+        for char in message:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(0.04)
+            # RESTART
         while True:
             while True:
-                restart = input("\n\033[2;31;40m1. Restart\n2. Sluit af\n: \033[0;37;40m")
-                if restart in ("1") or ("2"):
-                    break
+                if answer2 == '2':
+                    restart = input("\n\033[2;31;40m1. Restart\n2. Sluit af\n: \033[0;37;40m")
+                    if restart in ("1") or ("2"):
+                        break
             if restart == "1":
                 restartMessage = "\033[2;33;40mLaten we het weer proberen!\033[0;37;40m"
                 for char in restartMessage:
@@ -144,7 +166,7 @@ while True:
                 time.sleep(0.8)
                 os.system("cls")
                 time.sleep(1)
-                os.system("py hetverhaalvan.py")
+                os.system("py hetverhaalvanAkram.py")
             elif restart == "2":
                 closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
                 for char in closeMessage:
@@ -160,8 +182,9 @@ while True:
                 os.system("cls")
         break
     else:
-        print('Invalid input.')
-        time.sleep(0.7)
+        print('Invalid Input')
+        time.sleep(1.3)  
+
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 4 Loop
 while True:
@@ -226,7 +249,7 @@ while True:
                 time.sleep(0.8)
                 os.system("cls")
                 time.sleep(1)
-                os.system("py hetverhaalvan.py")
+                os.system("py hetverhaalvanAkram.py")
             elif restart == "2":
                 closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
                 for char in closeMessage:
@@ -291,7 +314,7 @@ while True:
                 time.sleep(0.8)
                 os.system("cls")
                 time.sleep(1)
-                os.system("py hetverhaalvan.py")
+                os.system("py hetverhaalvanAkram.py")
             elif restart == "2":
                 closeMessage = "\033[2;33;40mow... :( tot volgende keer..\033[0;37;40m"
                 for char in closeMessage:
