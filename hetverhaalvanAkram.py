@@ -1,4 +1,5 @@
-import time, sys, os
+import time, sys, os, pip
+
 respect = 0
 maximumRespect = 465
 
@@ -7,9 +8,7 @@ for char in welcome:
     sys.stdout.write(char)
     sys.stdout.flush()
     time.sleep(0.05)
-
 naam = input(": ")
-
 welcome = "Welkom " + naam[0] .upper() + naam[1:] .lower() + "."
 for char in welcome:
     sys.stdout.write(char)
