@@ -1,4 +1,4 @@
-import time, sys, os, pip
+import time, sys, os
 
 respect = 0
 maximumRespect = 525
@@ -31,7 +31,6 @@ os.system("cls")
 time.sleep(1)
         # End welcome
     
-
 from tqdm import tqdm
 for i in tqdm(range(0, 100), desc="Loading", unit="bit"): 
     time.sleep(0.0050)
