@@ -1,7 +1,7 @@
 import time, sys, os, pip
 
 respect = 0
-maximumRespect = 465
+maximumRespect = 525
 
 welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?"
 for char in welcome:
