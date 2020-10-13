@@ -7,7 +7,7 @@ welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw na
 for char in welcome:
     sys.stdout.write(char)
     sys.stdout.flush()
-    time.sleep(0.05)
+    time.sleep(0.040)
 naam = input(": ")
 welcome = "Welkom " + naam[0] .upper() + naam[1:] .lower() + "."
 for char in welcome:
@@ -19,7 +19,7 @@ welcome = "\nDit verhaal is gebaseerd op het verhaal van Akram, een vluchteling 
 for char in welcome:
     sys.stdout.write(char)
     sys.stdout.flush()
-    time.sleep(0.05)
+    time.sleep(0.037)
 time.sleep(1.7)
 welcome = "\nLaten we maar beginnen."
 for char in welcome:
@@ -33,7 +33,7 @@ time.sleep(1)
     
 from tqdm import tqdm
 for i in tqdm(range(0, 100), desc="Loading", unit="bit"): 
-    time.sleep(0.0050)
+    time.sleep(0.0079)
 time.sleep(1.2)
 os.system("cls")
         # End Loading
@@ -173,7 +173,6 @@ if answer == '2':
                         time.sleep(0.07)
                     time.sleep(0.6)
                     os.system("taskkill /IM cmd.exe")
-                    break
                 else:
                     print('Invalid input.')
                     time.sleep(0.7)
@@ -401,7 +400,7 @@ for char in message:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 8 Loop
+#Question 8 Loop (expanded)
 while True:
     while True:
         os.system("cls")
@@ -423,6 +422,33 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
+for char in message:
+    sys.stdout.write(char)
+    sys.stdout.flush()
+    time.sleep(0.04)
+#Question 8 expansion
+if answer == '1':
+    while True:
+        while True:
+            os.system("cls")
+            answer2 = input("Je bent verdwaald en moet hulp vragen aan iemand, je besluit om...\n\033[2;33;40m1. Hulp vragen aan een agent.\n2. Hulp vragen aan iemand die Iraans lijkt.\n\033[0;37;40mkeuze: ")
+            if answer2 in ('1') or ('2'):
+                break
+        if answer2 == '1':
+            message = "\033[2;33;40mJe vraagt hulp aan de agent, maar omdat hij je niet begrijpt moet je mee met hem naar het bureau om iemand te zoeken die het kan vertalen.\033[0;37;40m"
+            respect = respect - 30
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        elif answer2 == '2':
+            message = "\033[2;33;40mGelukkig had je het goed en kon hij echt Iraans spreken, hij helpt je verder naar het IND.\033[0;37;40m"
+            respect = respect + 20 
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        else:
+            print('Invalid input.')
+            time.sleep(0.7)
 for char in message:
     sys.stdout.write(char)
     sys.stdout.flush()
