@@ -1,4 +1,17 @@
 import time, sys, os
+import pip._internal as pip
+
+def install(package):
+    pip.main(['install', package])
+    
+if __name__ == '__main__':
+    try:
+        from tqdm import tqdm
+    except ImportError:
+        install('tqdm')
+        from tqdm import tqdm
+        time.sleep(1.5)
+        
 
 respect = 0
 maximumRespect = 525
@@ -30,8 +43,7 @@ time.sleep(0.8)
 os.system("cls")
 time.sleep(1)
         # End welcome
-    
-from tqdm import tqdm
+
 for i in tqdm(range(0, 100), desc="Loading", unit="bit"): 
     time.sleep(0.0079)
 time.sleep(1.2)
