@@ -3,7 +3,7 @@ import pip._internal as pip
 
 def install(package):
     pip.main(['install', package])
-    
+
 if __name__ == '__main__':
     try:
         from tqdm import tqdm
