@@ -10,7 +10,8 @@ if __name__ == '__main__':
     except ImportError:
         install('tqdm')
         from tqdm import tqdm
-        time.sleep(1.5)
+        time.sleep(3)
+        os.system("cls")
         
 
 respect = 0
@@ -528,64 +529,8 @@ time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 11 Loop
-while True:
-    while True:
-        os.system("cls")
-        answer = input("[] \n\033[2;33;40m1. \n2. \n\033[0;37;40mkeuze: ")
-        if answer in ('1') or ('2'):
-            break
-    if answer == '1':
-        message = "\033[2;33;40m\033[0;37;40m"
-        respect = respect 
-        time.sleep(1.3)
-        os.system("cls")
-        break
-    elif answer == '2':
-        message = "\033[2;33;40m\033[0;37;40m"
-        respect = respect 
-        respect = respect 
-        time.sleep(1.3)
-        os.system("cls")
-        break
-    else:
-        print('Invalid input.')
-        time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
-time.sleep(1)
-os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 12 Loop
-while True:
-    while True:
-        os.system("cls")
-        answer = input("[] \n\033[2;33;40m1. \n2. \n\033[0;37;40mkeuze: ")
-        if answer in ('1') or ('2'):
-            break
-    if answer == '1':
-        message = "\033[2;33;40m\033[0;37;40m"
-        respect = respect 
-        time.sleep(1.3)
-        os.system("cls")
-        break
-    elif answer == '2':
-        message = "\033[2;33;40m\033[0;37;40m"
-        respect = respect 
-        respect = respect 
-        time.sleep(1.3)
-        os.system("cls")
-        break
-    else:
-        print('Invalid input.')
-        time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
-time.sleep(1)
-os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 13 Loop
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
