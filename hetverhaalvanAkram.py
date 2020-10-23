@@ -14,37 +14,38 @@ if __name__ == '__main__':
         os.system("cls")
         
 respect = 0
-maximumRespect = 525
+maximumRespect = 590
 def typewriter(message):
     for char in message:
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.05)
+def typeweclome(welcome):
+    lengte = len(welcome)
+    i = 0
+    if lengte <= 20:
+        while i < lengte:
+            for char in welcome:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.05)
+                i += 200
+    elif lengte >= 20:
+        while i < lengte:
+            for char in welcome:
+                sys.stdout.write(char)
+                sys.stdout.flush()
+                time.sleep(0.037)
+            i += 200       
 # End import & func
 
-welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?"
-for char in welcome:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.040)
+typeweclome("Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?")
 naam = input(": ")
-welcome = "Welkom " + naam[0] .upper() + naam[1:] .lower() + "."
-for char in welcome:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.05)
+typeweclome("Welkom " + naam[0] .upper() + naam[1:] .lower() + ".")
 time.sleep(0.8)
-welcome = "\nDit verhaal is gebaseerd op het verhaal van Akram, een vluchteling uit Iran, je kunt haar verhaal bekijken op https://vluchtelingenwerk.nl"
-for char in welcome:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.037)
+typeweclome("\nDit verhaal is gebaseerd op het verhaal van Akram, een vluchteling uit Iran, je kunt haar verhaal bekijken op https://vluchtelingenwerk.nl")
 time.sleep(1.7)
-welcome = "\nLaten we maar beginnen."
-for char in welcome:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.05)
+typeweclome("\nLaten we maar beginnen.")
 time.sleep(0.8)
 os.system("cls")
 time.sleep(1)
@@ -103,7 +104,7 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-time.sleep(10)
+time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 3 Loop (death "maybe")
