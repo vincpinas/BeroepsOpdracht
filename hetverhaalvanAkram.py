@@ -13,9 +13,13 @@ if __name__ == '__main__':
         time.sleep(3)
         os.system("cls")
         
-
 respect = 0
 maximumRespect = 525
+def typewriter(message):
+    for char in message:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.05)
 
 welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?"
 for char in welcome:
@@ -59,13 +63,13 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe hebt je aangesloten bij het verzet en hebt andere mensen met een gelijke mening gevonden. RESPECT +80\033[0;37;40m"
+        typewriter("\033[2;33;40mJe hebt je aangesloten bij het verzet en hebt andere mensen met een gelijke mening gevonden. RESPECT +80\033[0;37;40m")
         respect = respect + 80
         time.sleep(1.5)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt ervoor gekozen om niks te doen maar wordt nog steeds opgepakt voor verdenking van verzet, wanneer je vrij komt ga je het verzet in. RESPECT -20\033[0;37;40m"
+        typewriter("\033[2;33;40mJe hebt ervoor gekozen om niks te doen maar wordt nog steeds opgepakt voor verdenking van verzet, wanneer je vrij komt ga je het verzet in. RESPECT -20\033[0;37;40m")
         respect = respect - 20
         time.sleep(1.5)
         os.system("cls")
@@ -73,10 +77,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -88,13 +88,13 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe probeert hem te redden, maar nu word je zelf ook opgepakt, dagelijks gemarteld en in isolatie gestopt. RESPECT +100\033[0;37;40m"
+        typewriter("\033[2;33;40mJe probeert hem te redden, maar nu word je zelf ook opgepakt, dagelijks gemarteld en in isolatie gestopt. RESPECT +100\033[0;37;40m")
         respect = respect + 100
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe bent nog even vrij, maar op een dag word je verraden door de kamerraad die was opgepakt en word je nu zelf ook in de gevangenis gegooid. RESPECT -50\033[0;37;40m"
+        typewriter("\033[2;33;40mJe bent nog even vrij, maar op een dag word je verraden door de kamerraad die was opgepakt en word je nu zelf ook in de gevangenis gegooid. RESPECT -50\033[0;37;40m")
         respect = respect - 50
         time.sleep(1.3)
         os.system("cls")
@@ -102,10 +102,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -117,23 +113,14 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe hebt besloten in een groep sterk te staan en van uit de gevangenis door proberen te vechten voor je rechten je hebt hier door het respect van velen verdiend en overleefd het voor nu. RESPECT +100\033[0;37;40m"
+        typewriter("\033[2;33;40mJe hebt besloten in een groep sterk te staan en van uit de gevangenis door proberen te vechten voor je rechten je hebt hier door het respect van velen verdiend en overleefd het voor nu. RESPECT +100\033[0;37;40m")
         respect = respect + 100
         time.sleep(1)
         os.system("cls")
-        for char in message:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.04)
         time.sleep(1.3)
-        os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt het opgegeven en dat straal je ook uit.\033[0;37;40m\n"
-        for char in message:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.04)
+        typewriter("\033[2;33;40mJe hebt het opgegeven en dat straal je ook uit.\033[0;37;40m\n")
         break
     else:
         print('Invalid input.')
@@ -146,21 +133,13 @@ if answer == '2':
             if answer2 in ('1') or ('2'):
                 break
         if answer2 == '1':
-            message = "\033[2;33;40mJe accepteert de mans hulp en houd jezelf sterk. RESPECT +10\033[0;37;40m"
-            for char in message:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.04)
+            typewriter("\033[2;33;40mJe accepteert de mans hulp en houd jezelf sterk. RESPECT +10\033[0;37;40m")
             respect = respect + 10
             time.sleep(1.3)
             os.system("cls")
             break
         elif answer2 == '2':
-            message = "\033[2;33;40mJe weigert de man zijn hulp, hij loopt weg terwijl hij zijn hoofd schudt. Je hebt het nu totaal opgegeven en zal hier dood gaan.\033[0;37;40m"
-            for char in message:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.04)
+            typewriter("\033[2;33;40mJe weigert de man zijn hulp, hij loopt weg terwijl hij zijn hoofd schudt. Je hebt het nu totaal opgegeven en zal hier dood gaan.\033[0;37;40m")
                 # RESTART
             while True:
                 while True:
@@ -202,21 +181,13 @@ if answer == '2' and answer2 == '1':
             if answer in ('1') or ('2'):
                 break
         if answer3 == '1':
-            message = "\033[2;33;40mJe spreekt hun aan en meteen beginnen ze terug te praten, er breekt een gevecht uit en de bewaking moet komen. RESPECT -10\033[0;37;40m"
-            for char in message:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.04)
+            typewriter("\033[2;33;40mJe spreekt hun aan en meteen beginnen ze terug te praten, er breekt een gevecht uit en de bewaking moet komen. RESPECT -10\033[0;37;40m")
             respect = respect - 10
             time.sleep(1.3)
             os.system("cls")
             break
         elif answer3 == '2':
-            message = "\033[2;33;40mJe houd je zelf rustig en houd rekening met waar je bent. RESPECT +30\033[0;37;40m"
-            for char in message:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.04)
+            typewriter("\033[2;33;40mJe houd je zelf rustig en houd rekening met waar je bent. RESPECT +30\033[0;37;40m")
             respect = respect + 30
             time.sleep(1.3)
             os.system("cls")
@@ -233,13 +204,13 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mDe andere bewakers komen hem helpen waarna je in isolatie wordt gegooid voor de volgende paar maanden. RESPECT +50\033[0;37;40m"
+        typewriter("\033[2;33;40mDe andere bewakers komen hem helpen waarna je in isolatie wordt gegooid voor de volgende paar maanden. RESPECT +50\033[0;37;40m")
         respect = respect + 50
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt geluk en de andere bewakers komen laat om je te helpen maar je overleeft het wel. RESPECT +40\033[0;37;40m"
+        typewriter("\033[2;33;40mJe hebt geluk en de andere bewakers komen laat om je te helpen maar je overleeft het wel. RESPECT +40\033[0;37;40m")
         respect = respect + 40
         time.sleep(1.3)
         os.system("cls")
@@ -247,10 +218,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -262,13 +229,9 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mBang voor je leven probeerde je jezelf los te worstelen, de bewakers schrikken zich en uit schok schieten ze je neer, je verhaal eindigt hier.\033[0;37;40m"
+        typewriter("\033[2;33;40mBang voor je leven probeerde je jezelf los te worstelen, de bewakers schrikken zich en uit schok schieten ze je neer, je verhaal eindigt hier.\033[0;37;40m")
         time.sleep(1.3)
         os.system("cls")
-        for char in message:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.04)
         end = "\n\033[2;31;40mJammer genoeg is je verhaal hier al afgelopen, bedankt voor het spelen."
         for char in end:
             sys.stdout.write(char)
@@ -304,7 +267,7 @@ while True:
                 os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mDe bewakers namen je mee naar buiten de gevangenis, hier doen ze de blinddoek af en word je naar buiten geduwd. Je bent nu weer uit de gevangenis. RESPECT +30\033[0;37;40m"
+        typewriter("\033[2;33;40mDe bewakers namen je mee naar buiten de gevangenis, hier doen ze de blinddoek af en word je naar buiten geduwd. Je bent nu weer uit de gevangenis. RESPECT +30\033[0;37;40m")
         respect = respect + 30
         time.sleep(1.3)
         os.system("cls")
@@ -312,10 +275,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -327,13 +286,9 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe hebt besloten om in Iran te blijven wonen, maar dit was niet een slimme keuze. Nog altijd onderdrukt en in gevaar krijg je hierna niet meer de kans om het land te verlaten en ga je hier op een vroege leeftijd al dood.\033[0;37;40m"
+        typewriter("\033[2;33;40mJe hebt besloten om in Iran te blijven wonen, maar dit was niet een slimme keuze. Nog altijd onderdrukt en in gevaar krijg je hierna niet meer de kans om het land te verlaten en ga je hier op een vroege leeftijd al dood.\033[0;37;40m")
         time.sleep(1.3)
         os.system("cls")
-        for char in message:
-            sys.stdout.write(char)
-            sys.stdout.flush()
-            time.sleep(0.04)
         end = "\n\033[2;31;40mJammer genoeg is je verhaal hier al afgelopen, bedankt voor het spelen."
         for char in end:
             sys.stdout.write(char)
@@ -369,7 +324,7 @@ while True:
                 os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt besloten om naar een veilig land te vluchten, de trip zal moeilijk worden. RESPECT +15 \033[0;37;40m"
+        typewriter("\033[2;33;40mJe hebt besloten om naar een veilig land te vluchten, de trip zal moeilijk worden. RESPECT +15 \033[0;37;40m")
         respect = respect + 15
         time.sleep(1.3)
         os.system("cls")
@@ -377,10 +332,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -392,13 +343,13 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mDe auto wordt aan de grens kort geïnspecteerd, gelukkig kijken ze niet naar wat erin zit en krijgen de smokkelaars je buiten het land. RESPECT +60\033[0;37;40m"
+        typewriter("\033[2;33;40mDe auto wordt aan de grens kort geïnspecteerd, gelukkig kijken ze niet naar wat erin zit en krijgen de smokkelaars je buiten het land. RESPECT +60\033[0;37;40m")
         respect = respect + 60
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mDe boot is heel krap met de hoeveelheid vluchtelingen die hetzelfde idee hadden, je besluit in een hoekje van de boot de te gaan zitten waar nu nog de meeste ruimte is. RESPECT +90\033[0;37;40m"
+        typewriter("\033[2;33;40mDe boot is heel krap met de hoeveelheid vluchtelingen die hetzelfde idee hadden, je besluit in een hoekje van de boot de te gaan zitten waar nu nog de meeste ruimte is. RESPECT +90\033[0;37;40m")
         respect = respect + 90
         time.sleep(1.3)
         os.system("cls")
@@ -406,10 +357,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -421,13 +368,13 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mJe probeert het zelf te zoeken maar na een tijdje raak je verdwaald en moet je iemand zoeken die jou kan helpen.\033[0;37;40m"
+        typewriter("\033[2;33;40mJe probeert het zelf te zoeken maar na een tijdje raak je verdwaald en moet je iemand zoeken die jou kan helpen.\033[0;37;40m")
         respect = respect - 30
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mJe hebt de instructies goed gevolgd en de aanvraag naar een asielprocedure gaat goed.\033[0;37;40m"
+        typewriter("\033[2;33;40mJe hebt de instructies goed gevolgd en de aanvraag naar een asielprocedure gaat goed.\033[0;37;40m")
         respect = respect + 20 
         time.sleep(1.3)
         os.system("cls")
@@ -435,10 +382,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 #Question 8 expansion
 if answer == '1':
     while True:
@@ -448,13 +391,13 @@ if answer == '1':
             if answer2 in ('1') or ('2'):
                 break
         if answer2 == '1':
-            message = "\033[2;33;40mJe vraagt hulp aan de agent, maar omdat hij je niet begrijpt moet je mee met hem naar het bureau om iemand te zoeken die het kan vertalen.\033[0;37;40m"
+            typewriter("\033[2;33;40mJe vraagt hulp aan de agent, maar omdat hij je niet begrijpt moet je mee met hem naar het bureau om iemand te zoeken die het kan vertalen.\033[0;37;40m")
             respect = respect - 30
             time.sleep(1.3)
             os.system("cls")
             break
         elif answer2 == '2':
-            message = "\033[2;33;40mGelukkig had je het goed en kon hij echt Iraans spreken, hij helpt je verder naar het IND.\033[0;37;40m"
+            typewriter("\033[2;33;40mGelukkig had je het goed en kon hij echt Iraans spreken, hij helpt je verder naar het IND.\033[0;37;40m")
             respect = respect + 20 
             time.sleep(1.3)
             os.system("cls")
@@ -462,10 +405,6 @@ if answer == '1':
         else:
             print('Invalid input.')
             time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -477,13 +416,13 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40mTijdens je gesprek begin je te schreeuwen tegen de medewerkers omdat je gestrestst bent, de medewerkers kunnen hier helaas geen sympathie voor tonen.\033[0;37;40m"
+        typewriter("\033[2;33;40mTijdens je gesprek begin je te schreeuwen tegen de medewerkers omdat je gestrestst bent, de medewerkers kunnen hier helaas geen sympathie voor tonen.\033[0;37;40m")
         respect = respect - 70
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40mTijdens je gesprek met het COA val je door alles wat er gebeurd is en hoe weinig slaap je hebt gehad bijna in slaap, ze moeten je nu wakker proberen te houden.\033[0;37;40m"
+        typewriter("\033[2;33;40mTijdens je gesprek met het COA val je door alles wat er gebeurd is en hoe weinig slaap je hebt gehad bijna in slaap, ze moeten je nu wakker proberen te houden.\033[0;37;40m")
         respect = respect - 15  
         time.sleep(1.3)
         os.system("cls")
@@ -491,10 +430,6 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -506,25 +441,20 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        message = "\033[2;33;40m\033[0;37;40m"
+        typewriter("\033[2;33;40m\033[0;37;40m")
         respect = respect  
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        message = "\033[2;33;40m\033[0;37;40m"
-        respect = respect 
-        respect = respect 
+        typewriter("\033[2;33;40m\033[0;37;40m")
+        respect = respect
         time.sleep(1.3)
         os.system("cls")
         break
     else:
         print('Invalid input.')
         time.sleep(0.7)
-for char in message:
-    sys.stdout.write(char)
-    sys.stdout.flush()
-    time.sleep(0.04)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
