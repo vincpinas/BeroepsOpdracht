@@ -20,6 +20,7 @@ def typewriter(message):
         sys.stdout.write(char)
         sys.stdout.flush()
         time.sleep(0.05)
+# End import & func
 
 welcome = "Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?"
 for char in welcome:
