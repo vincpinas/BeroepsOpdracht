@@ -64,13 +64,13 @@ while True:
             break
     if answer == '1':
         typewriter("\033[2;33;40mJe hebt je aangesloten bij het verzet en hebt andere mensen met een gelijke mening gevonden. RESPECT +80\033[0;37;40m")
-        respect = respect + 80
+        respect += 80
         time.sleep(1.5)
         os.system("cls")
         break
     elif answer == '2':
         typewriter("\033[2;33;40mJe hebt ervoor gekozen om niks te doen maar wordt nog steeds opgepakt voor verdenking van verzet, wanneer je vrij komt ga je het verzet in. RESPECT -20\033[0;37;40m")
-        respect = respect - 20
+        respect -= 20
         time.sleep(1.5)
         os.system("cls")
         break
@@ -89,20 +89,20 @@ while True:
             break
     if answer == '1':
         typewriter("\033[2;33;40mJe probeert hem te redden, maar nu word je zelf ook opgepakt, dagelijks gemarteld en in isolatie gestopt. RESPECT +100\033[0;37;40m")
-        respect = respect + 100
+        respect += 100
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
         typewriter("\033[2;33;40mJe bent nog even vrij, maar op een dag word je verraden door de kamerraad die was opgepakt en word je nu zelf ook in de gevangenis gegooid. RESPECT -50\033[0;37;40m")
-        respect = respect - 50
+        respect -= 50
         time.sleep(1.3)
         os.system("cls")
         break
     else:
         print('Invalid input.')
         time.sleep(0.7)
-time.sleep(1)
+time.sleep(10)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 3 Loop (death "maybe")
@@ -114,7 +114,7 @@ while True:
             break
     if answer == '1':
         typewriter("\033[2;33;40mJe hebt besloten in een groep sterk te staan en van uit de gevangenis door proberen te vechten voor je rechten je hebt hier door het respect van velen verdiend en overleefd het voor nu. RESPECT +100\033[0;37;40m")
-        respect = respect + 100
+        respect += 100
         time.sleep(1)
         os.system("cls")
         time.sleep(1.3)
@@ -134,7 +134,7 @@ if answer == '2':
                 break
         if answer2 == '1':
             typewriter("\033[2;33;40mJe accepteert de mans hulp en houd jezelf sterk. RESPECT +10\033[0;37;40m")
-            respect = respect + 10
+            respect += 10
             time.sleep(1.3)
             os.system("cls")
             break
@@ -182,13 +182,13 @@ if answer == '2' and answer2 == '1':
                 break
         if answer3 == '1':
             typewriter("\033[2;33;40mJe spreekt hun aan en meteen beginnen ze terug te praten, er breekt een gevecht uit en de bewaking moet komen. RESPECT -10\033[0;37;40m")
-            respect = respect - 10
+            respect -= 10
             time.sleep(1.3)
             os.system("cls")
             break
         elif answer3 == '2':
             typewriter("\033[2;33;40mJe houd je zelf rustig en houd rekening met waar je bent. RESPECT +30\033[0;37;40m")
-            respect = respect + 30
+            respect += 30
             time.sleep(1.3)
             os.system("cls")
             break
@@ -205,13 +205,13 @@ while True:
             break
     if answer == '1':
         typewriter("\033[2;33;40mDe andere bewakers komen hem helpen waarna je in isolatie wordt gegooid voor de volgende paar maanden. RESPECT +50\033[0;37;40m")
-        respect = respect + 50
+        respect += 50
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
         typewriter("\033[2;33;40mJe hebt geluk en de andere bewakers komen laat om je te helpen maar je overleeft het wel. RESPECT +40\033[0;37;40m")
-        respect = respect + 40
+        respect += 40
         time.sleep(1.3)
         os.system("cls")
         break
@@ -268,7 +268,7 @@ while True:
         break
     elif answer == '2':
         typewriter("\033[2;33;40mDe bewakers namen je mee naar buiten de gevangenis, hier doen ze de blinddoek af en word je naar buiten geduwd. Je bent nu weer uit de gevangenis. RESPECT +30\033[0;37;40m")
-        respect = respect + 30
+        respect += 30
         time.sleep(1.3)
         os.system("cls")
         break
@@ -325,7 +325,7 @@ while True:
         break
     elif answer == '2':
         typewriter("\033[2;33;40mJe hebt besloten om naar een veilig land te vluchten, de trip zal moeilijk worden. RESPECT +15 \033[0;37;40m")
-        respect = respect + 15
+        respect += 15
         time.sleep(1.3)
         os.system("cls")
         break
@@ -344,13 +344,13 @@ while True:
             break
     if answer == '1':
         typewriter("\033[2;33;40mDe auto wordt aan de grens kort geïnspecteerd, gelukkig kijken ze niet naar wat erin zit en krijgen de smokkelaars je buiten het land. RESPECT +60\033[0;37;40m")
-        respect = respect + 60
+        respect += 60
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
         typewriter("\033[2;33;40mDe boot is heel krap met de hoeveelheid vluchtelingen die hetzelfde idee hadden, je besluit in een hoekje van de boot de te gaan zitten waar nu nog de meeste ruimte is. RESPECT +90\033[0;37;40m")
-        respect = respect + 90
+        respect += 90
         time.sleep(1.3)
         os.system("cls")
         break
@@ -368,14 +368,14 @@ while True:
         if answer in ('1') or ('2'):
             break
     if answer == '1':
-        typewriter("\033[2;33;40mJe probeert het zelf te zoeken maar na een tijdje raak je verdwaald en moet je iemand zoeken die jou kan helpen.\033[0;37;40m")
-        respect = respect - 30
+        typewriter("\033[2;33;40mJe probeert het zelf te zoeken maar na een tijdje raak je verdwaald en moet je iemand zoeken die jou kan helpen. RESPECT -30\033[0;37;40m")
+        respect -= 30
         time.sleep(1.3)
         os.system("cls")
         break
     elif answer == '2':
-        typewriter("\033[2;33;40mJe hebt de instructies goed gevolgd en de aanvraag naar een asielprocedure gaat goed.\033[0;37;40m")
-        respect = respect + 20 
+        typewriter("\033[2;33;40mJe hebt de instructies goed gevolgd en de aanvraag naar een asielprocedure gaat goed. RESPECT +20\033[0;37;40m")
+        respect += 20 
         time.sleep(1.3)
         os.system("cls")
         break
@@ -391,14 +391,14 @@ if answer == '1':
             if answer2 in ('1') or ('2'):
                 break
         if answer2 == '1':
-            typewriter("\033[2;33;40mJe vraagt hulp aan de agent, maar omdat hij je niet begrijpt moet je mee met hem naar het bureau om iemand te zoeken die het kan vertalen.\033[0;37;40m")
-            respect = respect - 30
+            typewriter("\033[2;33;40mJe vraagt hulp aan de agent, maar omdat hij je niet begrijpt moet je mee met hem naar het bureau om iemand te zoeken die het kan vertalen. RESPECT -30\033[0;37;40m")
+            respect -= 30
             time.sleep(1.3)
             os.system("cls")
             break
         elif answer2 == '2':
-            typewriter("\033[2;33;40mGelukkig had je het goed en kon hij echt Iraans spreken, hij helpt je verder naar het IND.\033[0;37;40m")
-            respect = respect + 20 
+            typewriter("\033[2;33;40mGelukkig had je het goed en kon hij echt Iraans spreken, hij helpt je verder naar het IND. RESPECT +20\033[0;37;40m")
+            respect += 20 
             time.sleep(1.3)
             os.system("cls")
             break
@@ -412,18 +412,18 @@ os.system("cls")
 while True:
     while True:
         os.system("cls")
-        answer = input("[9] Je hebt een asielverzoek, nu moet je naar het COA voor opvang tijdens de procedure je besluit je om...\n\033[2;33;40m1. Schreeuwen tegen de medewerkers\n2. In slaap vallen tijdens het gesprek\n\033[0;37;40mkeuze: ")
-        if answer in ('1') or ('2'):
+        answerQuestion9 = input("[9] Je hebt een asielverzoek, nu moet je naar het COA voor opvang tijdens de procedure je besluit je om...\n\033[2;33;40m1. Schreeuwen tegen de medewerkers\n2. In slaap vallen tijdens het gesprek\n\033[0;37;40mkeuze: ")
+        if answerQuestion9 in ('1') or ('2'):
             break
-    if answer == '1':
-        typewriter("\033[2;33;40mTijdens je gesprek begin je te schreeuwen tegen de medewerkers omdat je gestrestst bent, de medewerkers kunnen hier helaas geen sympathie voor tonen.\033[0;37;40m")
-        respect = respect - 70
+    if answerQuestion9 == '1':
+        typewriter("\033[2;33;40mTijdens je gesprek begin je te schreeuwen tegen de medewerkers omdat je gestrestst bent, de medewerkers kunnen hier helaas geen sympathie voor tonen. RESPECT -45\033[0;37;40m")
+        respect -= 45
         time.sleep(1.3)
         os.system("cls")
         break
-    elif answer == '2':
-        typewriter("\033[2;33;40mTijdens je gesprek met het COA val je door alles wat er gebeurd is en hoe weinig slaap je hebt gehad bijna in slaap, ze moeten je nu wakker proberen te houden.\033[0;37;40m")
-        respect = respect - 15  
+    elif answerQuestion9 == '2':
+        typewriter("\033[2;33;40mTijdens je gesprek met het COA val je door alles wat er gebeurd is en hoe weinig slaap je hebt gehad bijna in slaap, ze moeten je nu wakker proberen te houden. RESPECT -10\033[0;37;40m")
+        respect -= 10  
         time.sleep(1.3)
         os.system("cls")
         break
@@ -433,28 +433,54 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 10 Loop
-while True:
+#Question 10(9 -1) Loop (Gaan schreeuwen)
+if answerQuestion9 == "1":
     while True:
-        os.system("cls")
-        answer = input("[] \n\033[2;33;40m1. \n2. \n\033[0;37;40mkeuze: ")
-        if answer in ('1') or ('2'):
+        while True:
+            os.system("cls")
+            answerQuestion10 = input("[10] Je bent gaan schreeuwen tegen de medewerkers en ze zijn nu boos op je, dit zal je verblijf minder leuk maken met hoe de medewerkers met je om zullen gaan. Je besluit om...\n\033[2;33;40m1. Relatie verbeteren. \n2. Het gewoon zo laten. \n\033[0;37;40mkeuze: ")
+            if answerQuestion10 in ('1') or ('2'):
+                break
+        if answerQuestion10 == '1':
+            typewriter("\033[2;33;40mJe biedt je excuses aan en ze accepteren het. RESPECT +10\033[0;37;40m")
+            respect += 10 
+            time.sleep(1.3)
+            os.system("cls")
             break
-    if answer == '1':
-        typewriter("\033[2;33;40m\033[0;37;40m")
-        respect = respect  
-        time.sleep(1.3)
-        os.system("cls")
-        break
-    elif answer == '2':
-        typewriter("\033[2;33;40m\033[0;37;40m")
-        respect = respect
-        time.sleep(1.3)
-        os.system("cls")
-        break
-    else:
-        print('Invalid input.')
-        time.sleep(0.7)
+        elif answerQuestion10 == '2':
+            typewriter("\033[2;33;40mJe bied niet je excuses aan. RESPECT -10\033[0;37;40m")
+            respect -= 10
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        else:
+            print('Invalid input.')
+            time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
+#Question 11(9 -2) Loop (In slaap gevallen)
+if answerQuestion9 == "2":
+    while True:
+        while True:
+            os.system("cls")
+            answerQuestion11 = input("[10] De procedure voor tijdelijk verblijf is zojuist afgelopen, helaas was je wel meerdere keren bijna in slaap gevallen. Je besluit om...\n\033[2;33;40m1. Je legt uit wat er mis is, dit waarderen ze.\n2. Je zegt niks over.\033[0;37;40mkeuze: ")
+            if answerQuestion11 in ('1') or ('2'):
+                break
+        if answerQuestion11 == '1':
+            typewriter("\033[2;33;40mJe biedt je excuses aan en ze accepteren het. RESPECT +35\033[0;37;40m")
+            respect += 35
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        elif answerQuestion11 == '2':
+            typewriter("\033[2;33;40mJe bied niet je excuses aan. RESPECT -35\033[0;37;40m")
+            respect -= 35
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        else:
+            print('Invalid input.')
+            time.sleep(0.7)
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
