@@ -15,7 +15,7 @@ if __name__ == '__main__':
         os.system("cls")
         
 respect = 0
-maximumRespect = 590
+maximumRespect = 620
 def typewriter(message):
     for char in message:
         sys.stdout.write(char)
@@ -48,7 +48,7 @@ time.sleep(1)
         # End welcome
 
 for i in tqdm(range(0, 100), desc="Loading", unit="bit"): 
-    time.sleep(0.0079)
+    time.sleep(0.0069)
 time.sleep(1.2)
 os.system("cls")
         # End Loading
@@ -483,10 +483,79 @@ time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 11 Loop
+while True:
+    while True:
+        os.system("cls")
+        answer = input("[11] Je hebt nu wat vrije tijd in het opvangcentrum, je besluit om...\n\033[2;33;40m1. Een boek te gaan lezen\n2. Extra tijd besteden om Nederlands wat beter te leren\n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
+            break
+    if answer == '1':
+        typewriter("\033[2;33;40mJe zoekt een boek om te lezen, helaas snap je er niks van omdat het boek in Nederlands geschreven is.\033[0;37;40m")
+        respect = respect
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answer == '2':
+        typewriter("\033[2;33;40mJe wilt je Nederlands verbeteren, om dit te doen ga je een boek zoeken om te lezen en iemand die de woorden voor je kan vertalen.\033[0;37;40m")
+        respect = respect
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 12 Loop
+#Question 12 Loop (16 stukjes in totaal)
+while True:
+    while True:
+        os.system("cls")
+        answer = input("[12] Het is je laatste dag in het kamp, je gaat morgen verplaatst worden naar een nieuwe locatie, je besluit om...\n\033[2;33;40m1. Sporten\n2. Rusten\n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
+            break
+    if answer == '1':
+        typewriter("\033[2;33;40mJe bent een tijdje gaan sporten, dit haalt je zorgen een beetje weg en je komt wat meer tot rust voor de komende tijden. RESPECT +30\033[0;37;40m")
+        respect += 30
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answer == '2':
+        typewriter("\033[2;33;40mJe gaat rusten, maar hierdoor ga je te ver door denken en maakt je alleen maar meer zorgen over er wat er kan gebeuren in de toekomst en hoe het met je familie gaat. RESPECT -15\033[0;37;40m")
+        respect -= 15
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 13 Loop
+while True:
+    while True:
+        os.system("cls")
+        answer = input("[13] \n\033[2;33;40m1. \n2. \n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
+            break
+    if answer == '1':
+        typewriter("\033[2;33;40m\033[0;37;40m")
+        respect += 30
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answer == '2':
+        typewriter("\033[2;33;40m\033[0;37;40m")
+        respect -= 15
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 14 Loop
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
