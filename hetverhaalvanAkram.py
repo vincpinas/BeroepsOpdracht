@@ -1,4 +1,3 @@
-import time, sys, os
 import pip._internal as pip
 
 def install(package):
@@ -7,9 +6,11 @@ def install(package):
 if __name__ == '__main__':
     try:
         from tqdm import tqdm
+        import time, sys, os
     except ImportError:
         install('tqdm')
         from tqdm import tqdm
+        import time, sys, os
         time.sleep(3)
         os.system("cls")
         
@@ -19,33 +20,28 @@ def typewriter(message):
     for char in message:
         sys.stdout.write(char)
         sys.stdout.flush()
-        time.sleep(0.05)
-def typeweclome(welcome):
+        time.sleep(0.04)
+
+def typewelcome(welcome):
     lengte = len(welcome)
     i = 0
-    if lengte <= 20:
-        while i < lengte:
-            for char in welcome:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.05)
-                i += 200
-    elif lengte >= 20:
-        while i < lengte:
-            for char in welcome:
-                sys.stdout.write(char)
-                sys.stdout.flush()
-                time.sleep(0.037)
-            i += 200       
+    calc = lengte * 0.00020
+    wacht = 0.05 - calc
+    while i < lengte:
+        for char in welcome:
+            sys.stdout.write(char)
+            sys.stdout.flush()
+            time.sleep(wacht)
+            i += 200
 # End import & func
 
-typeweclome("Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?")
+typewelcome("Welkom bij het interactive verhaal van een nieuwkomer, wat is jouw naam?")
 naam = input(": ")
-typeweclome("Welkom " + naam[0] .upper() + naam[1:] .lower() + ".")
+typewelcome("Welkom " + naam[0] .upper() + naam[1:] .lower() + ".")
 time.sleep(0.8)
-typeweclome("\nDit verhaal is gebaseerd op het verhaal van Akram, een vluchteling uit Iran, je kunt haar verhaal bekijken op https://vluchtelingenwerk.nl")
+typewelcome("\nDit verhaal is gebaseerd op het verhaal van Akram, een vluchteling uit Iran, je kunt haar verhaal bekijken op https://vluchtelingenwerk.nl")
 time.sleep(1.7)
-typeweclome("\nLaten we maar beginnen.")
+typewelcome("\nLaten we maar beginnen.")
 time.sleep(0.8)
 os.system("cls")
 time.sleep(1)
