@@ -16,6 +16,8 @@ if __name__ == '__main__':
         
 respect = 0
 maximumRespect = 620
+geld = 0
+
 def typewriter(message):
     for char in message:
         sys.stdout.write(char)
@@ -53,7 +55,7 @@ time.sleep(1.2)
 os.system("cls")
         # End Loading
 
-#Question 1 Loop
+#Question 1 Loop (stukje 1)
 while True:
     while True:
         os.system("cls")
@@ -78,7 +80,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 2 Loop
+#Question 2 Loop (stukje 2)
 while True:
     while True:
         os.system("cls")
@@ -103,7 +105,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 3 Loop (death "maybe")
+#Question 3 Loop (death "maybe") (stukje 3)
 while True:
     while True:
         os.system("cls")
@@ -123,7 +125,7 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-#Question [3] -2 Follow up Question (escape death or not)
+#Question [3] -2 Follow up Question (escape death or not) (stukje 4)
 if answer == '2': 
     while True:
         while True:
@@ -141,7 +143,6 @@ if answer == '2':
                 # RESTART
             while True:
                 while True:
-                    if answer2 == '2':
                         restart = input("\n\033[2;31;40m1. Restart\n2. Sluit af\n: \033[0;37;40m")
                         if restart in ("1") or ("2"):
                             break
@@ -171,7 +172,7 @@ if answer == '2':
         else:
             print('Invalid Input')
             time.sleep(1.3)  
-#Question [3 -2] Follow up (uitbreiding)
+#Question [3 -2] Follow up (uitbreiding) (stukje 5)
 if answer == '2' and answer2 == '1':
     while True:
         while True:
@@ -194,7 +195,7 @@ if answer == '2' and answer2 == '1':
             print('Invalid input.')
             time.sleep(0.7)
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 4 Loop
+#Question 4 Loop (stukje 6)
 while True:
     while True:
         os.system("cls")
@@ -219,7 +220,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 5 Loop (death)
+#Question 5 Loop (death) (stukje 7)
 while True:
     while True:
         os.system("cls")
@@ -276,7 +277,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 6 Loop (death)
+#Question 6 Loop (death) (stukje 8)
 while True:
     while True:
         os.system("cls")
@@ -333,7 +334,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 7 Loop
+#Question 7 Loop (stukje 9)
 while True:
     while True:
         os.system("cls")
@@ -358,7 +359,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 8 Loop (expanded)
+#Question 8 Loop (expanded) (stukje 10)
 while True:
     while True:
         os.system("cls")
@@ -380,7 +381,7 @@ while True:
     else:
         print('Invalid input.')
         time.sleep(0.7)
-#Question 8 expansion
+#Question 8 expansion (stukje 11)
 if answer == '1':
     while True:
         while True:
@@ -406,7 +407,7 @@ if answer == '1':
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 9 Loop
+#Question 9 Loop (stukje 12)
 while True:
     while True:
         os.system("cls")
@@ -431,7 +432,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 10(9 -1) Loop (Gaan schreeuwen)
+#Question 10(9 -1) Loop (Gaan schreeuwen) (stukje 13)
 if answerQuestion9 == "1":
     while True:
         while True:
@@ -456,7 +457,7 @@ if answerQuestion9 == "1":
             time.sleep(0.7)
 time.sleep(1)
 os.system("cls")
-#Question 11(9 -2) Loop (In slaap gevallen)
+#Question 11(9 -2) Loop (In slaap gevallen) (stukje 14)
 if answerQuestion9 == "2":
     while True:
         while True:
@@ -482,7 +483,7 @@ if answerQuestion9 == "2":
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 11 Loop
+#Question 11 Loop (stukje 15)
 while True:
     while True:
         os.system("cls")
@@ -507,7 +508,7 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 12 Loop (16 stukjes in totaal)
+#Question 12 Loop (stukje 16)
 while True:
     while True:
         os.system("cls")
@@ -532,20 +533,47 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 13 Loop
+#Question 13 Loop (stukje 17)
 while True:
     while True:
         os.system("cls")
-        answer = input("[13] \n\033[2;33;40m1. \n2. \n\033[0;37;40mkeuze: ")
+        answer = input("[13] De procedure is nu afgelopen, je hebt je verblijf vergunning dus je moet nu naar een huisvesting. Wanneer je er bent besluit je om...\n\033[2;33;40m1. Je zelf thuis maken en er een puin van maken.\n2. Je omgeving leren kennen.\n\033[0;37;40mkeuze: ")
         if answer in ('1') or ('2'):
             break
     if answer == '1':
+        typewriter("\033[2;33;40mHet puin blijft ophopen en is erg vies als bezoek langskomt. Je moet nu iemand betalen om je te helpen opruimen. RESPECT -40, GELD -€25\033[0;37;40m")
+        respect -= 40
+        geld -= 25
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answer == '2':
+        typewriter("\033[2;33;40mJe leert je omgeving kennen en wordt vrienden met de buren, als welkom cadeau geven ze je €50 om wat leuks te kopen. RESPECT +65, GELD +€50\033[0;37;40m")
+        respect += 65
+        geld += 50
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
+#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#Question 14 Loop (stukje 18)
+while True:
+    while True:
+        os.system("cls")
+        answerQuestion14 = input("[14] \n\033[2;33;40m1. \n2. \n\033[0;37;40mkeuze: ")
+        if answerQuestion14 in ('1') or ('2'):
+            break
+    if answerQuestion14 == '1':
         typewriter("\033[2;33;40m\033[0;37;40m")
         respect += 30
         time.sleep(1.3)
         os.system("cls")
         break
-    elif answer == '2':
+    elif answerQuestion14 == '2':
         typewriter("\033[2;33;40m\033[0;37;40m")
         respect -= 15
         time.sleep(1.3)
@@ -557,8 +585,6 @@ while True:
 time.sleep(1)
 os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 14 Loop
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 15 Loop
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 16 Loop
@@ -569,8 +595,13 @@ os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 #Question 19 Loop
 
+typewriter("Final stats:\n")
+time.sleep(1.5)
 respectPrint = "Respect: " + str(respect) + " / " + str(maximumRespect)
 for char in respectPrint:
     sys.stdout.write(char)
     sys.stdout.flush()
     time.sleep(0.04)
+time.sleep (1.5)
+typewriter("\nGeld: " + str(geld))
+time.sleep(2)
