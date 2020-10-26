@@ -15,7 +15,7 @@ if __name__ == '__main__':
         os.system("cls")
         
 respect = 0
-maximumRespect = 620
+maximumRespect = 790
 geld = 0
 
 def typewriter(message):
@@ -564,18 +564,18 @@ os.system("cls")
 while True:
     while True:
         os.system("cls")
-        answerQuestion14 = input("[14] \n\033[2;33;40m1. \n2. \n\033[0;37;40mkeuze: ")
-        if answerQuestion14 in ('1') or ('2'):
+        answer = input("[14] Je moet nu werk gaan zoeken om wat geld te verdienen terwijl je hier blijft, je besluit om...\n\033[2;33;40m1. Hulp te vragen vanuit de gemeente\n2. Hulp te vragen vanuit Vluchtelingenwerk\n\033[0;37;40mkeuze: ")
+        if answer in ('1') or ('2'):
             break
-    if answerQuestion14 == '1':
-        typewriter("\033[2;33;40m\033[0;37;40m")
-        respect += 30
+    if answer == '1':
+        typewriter("\033[2;33;40mJe vraagt hulp vanuit de gemeente, maar helaas kom je hier niet ver mee omdat de medewerkers alleen Nederlands praten, ze plannen een gesprek voor je in met iemand van vluchtelingen werk op een latere datum.\033[0;37;40m")
+        respect += 10
         time.sleep(1.3)
         os.system("cls")
         break
-    elif answerQuestion14 == '2':
-        typewriter("\033[2;33;40m\033[0;37;40m")
-        respect -= 15
+    elif answer == '2':
+        typewriter("\033[2;33;40mJe vraagt hulp van VluchtelingenWerk en ze kunnen je al snel op weg helpen. RESPECT +10\033[0;37;40m")
+        respect += 10
         time.sleep(1.3)
         os.system("cls")
         break
@@ -584,18 +584,101 @@ while True:
         time.sleep(0.7)
 time.sleep(1)
 os.system("cls")
+#Question 15 Uitbreiding op 14 (stukje 19)
+while True:
+    while True:
+        os.system("cls")
+        answerQuestion15 = input("[15] Je gaat in gesprek met een arbeid coach van Vluchtelingenwerk hier wordt vast gesteld wat je wensen zijn voor je werk en wat mogelijk is.\n\033[2;33;40m1. Het maakt je niet uit zolang je werk hebt.\n2. Je wilt de bouw in gaan.\n\033[0;37;40mkeuze: ")
+        if answerQuestion15 in ('1') or ('2'):
+            break
+    if answerQuestion15 == '1':
+        typewriter("\033[2;33;40mJe coach zoekt naar een bedrijf waar je zo snel mogelijk kan werken. RESPECT +5\033[0;37;40m")
+        respect += 5
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answerQuestion15 == '2':
+        typewriter("\033[2;33;40mJe wilt de bouw in gaan, je verdient hier €2700 per maand. RESPECT +20, GELD +€2700\033[0;37;40m")
+        respect += 20
+        geld += 2700
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
+#Question 15 uitbreiding op stukje 19 (stukje 20)
+if answerQuestion15 == "1":
+    while True:
+        while True:
+            os.system("cls")
+            answer = input("[15] Je coach heeft een paar mogelijk opties voor je gevonden je kiest om...\n\033[2;33;40m1. Vuilnisman worden\n2. Rioolwerker worden\n\033[0;37;40mkeuze: ")
+            if answer in ('1') or ('2'):
+                break
+        if answer == '1':
+            typewriter("\033[2;33;40mJe werkt als vuilnisman, hier verdien je ongeveer €2000 per maand mee. RESPECT +55, GELD +€2000\033[0;37;40m")
+            respect += 55
+            geld += 2000
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        elif answer == '2':
+            typewriter("\033[2;33;40mJe besluit down en dirty te gaan en riool werker te worden, je verdient 3000 per maand mee. RESPECT +100, GELD +€3000\033[0;37;40m")
+            respect += 100
+            geld += 3000
+            time.sleep(1.3)
+            os.system("cls")
+            break
+        else:
+            print('Invalid input.')
+            time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
 #---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 15 Loop
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 16 Loop
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 17 Loop
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 18 Loop
-#---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-#Question 19 Loop
+#Question16 (stukje 21)
+while True:
+    while True:
+        os.system("cls")
+        answerQuestion16 = input("[16] Je bent nu een tijdje in nederland geweest en hebt veel vrienden gemaakt, maar je woont nog steeds alleen. Je besluit om...\n\033[2;33;40m1. Te gaan daten\n2. Een huisdier te nemen\n\033[0;37;40mkeuze: ")
+        if answerQuestion16 in ('1') or ('2'):
+            break
+    if answerQuestion16 == '1':
+        typewriter("\033[2;33;40mJe gaat daten en door je vrienden vind je iemand leuk, jullie besluiten 2 jaar later om te gaan trouwen. RESPECT +100\033[0;37;40m")
+        respect += 100
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    elif answerQuestion16 == '2':
+        typewriter("\033[2;33;40mJe besluit om een huisdier te nemen. RESPECT +40, GELD -55\033[0;37;40m")
+        respect += 40
+        geld -= 55
+        time.sleep(1.3)
+        os.system("cls")
+        break
+    else:
+        print('Invalid input.')
+        time.sleep(0.7)
+time.sleep(1)
+os.system("cls")
 
-typewriter("Final stats:\n")
+if answerQuestion16 == "2":
+    typewriter("Je bent naar lokale dieren winkel gegaan voor een huisdier, ze hebben hier van alles. je kiest voor...\n")
+    huisdier = input("type dier: ")
+    time.sleep(1)
+    typewriter("Je hebt besloten op een " + huisdier + ", je moet hem/haar alleen nog een naam geven\n")
+    huisdierNaam = input("naam van huisdier: ")
+    time.sleep(1.3)
+    typewriter("Je leeft een prettig leven uit in Nederland samen met je " + huisdier + " " + huisdierNaam)
+    
+
+if answerQuestion16 == "1":
+    typewriter("Je leeft je leven uit samen met je geliefde en jullie twee kinderen")
+
+time.sleep(2)
+os.system("cls")
+typewriter("\nFinal stats:\n")
 time.sleep(1.5)
 respectPrint = "Respect: " + str(respect) + " / " + str(maximumRespect)
 for char in respectPrint:
@@ -605,3 +688,11 @@ for char in respectPrint:
 time.sleep (1.5)
 typewriter("\nGeld: " + str(geld))
 time.sleep(2)
+os.system("cls")
+typewriter("\nDit was het einde van het verhaal jammer genoeg, we hopen je weer een keer te zien.")
+time.sleep(0.7)
+typewriter("\nWil je meer informatie over vluchtelingen en hoe alles werkt?")
+typewriter("\nGa dan naar https://vluchtelingenwerk.nl/")
+time.sleep(0.4)
+typewriter("\nTot volgende keer!")
+time.sleep(5)
