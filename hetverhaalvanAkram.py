@@ -15,7 +15,7 @@ if __name__ == '__main__':
         os.system("cls")
         
 respect = 0
-maximumRespect = 790
+maximumRespect = 895
 geld = 0
 
 def typewriter(message):
