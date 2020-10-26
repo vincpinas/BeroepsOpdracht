@@ -664,10 +664,10 @@ time.sleep(1)
 os.system("cls")
 
 if answerQuestion16 == "2":
-    typewriter("Je bent naar lokale dieren winkel gegaan voor een huisdier, ze hebben hier van alles. je kiest voor...\n")
+    typewriter("Je bent naar lokale dierenwinkel gegaan voor een huisdier, ze hebben hier van alles. je kiest voor...\n")
     huisdier = input("type dier: ")
     time.sleep(1)
-    typewriter("Je hebt besloten op een " + huisdier + ", je moet hem/haar alleen nog een naam geven\n")
+    typewriter("Je hebt besloten op een " + huisdier + ", je moet hem/haar alleen nog een naam geven.\n")
     huisdierNaam = input("naam van huisdier: ")
     time.sleep(1.3)
     typewriter("Je leeft een prettig leven uit in Nederland samen met je " + huisdier + " " + huisdierNaam)
