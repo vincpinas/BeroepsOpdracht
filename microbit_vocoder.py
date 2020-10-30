@@ -14,17 +14,17 @@ box3 = Image("99999:90009:90009:90009:99999")
 all_boxes = [box1, box2, box3]
 
 def SayTheWords1(word):
-    speech.say(word, speed=100, pitch=100, throat=100, mouth=100)
+    speech.say(word, speed=100, pitch=150, throat=120, mouth=140)
     sleep(500)
 
-def SayTheWord2():
+def SayTheWords2():
     willekeurigGetal1 = random.randint(0, LengteWoordArray - 1)
     willekeurigGetal2 = random.randint(0, LengteWoordArray - 1)
     willekeurigGetal3 = random.randint(0, LengteWoordArray - 1)
     display.show(willekeurigGetal1 + willekeurigGetal2 + willekeurigGetal3)
-    SayTheWords(onderwerp[willekeurigGetal1])
-    SayTheWords(werkwoord[willekeurigGetal2])
-    SayTheWords(rest[willekeurigGetal3])
+    SayTheWords1(onderwerp[willekeurigGetal1])
+    SayTheWords1(werkwoord[willekeurigGetal2])
+    SayTheWords1(rest[willekeurigGetal3])
     
 def SayTheWords3(word):
     wordspeed = random.randint(10, 200)
@@ -33,13 +33,15 @@ def SayTheWords3(word):
     
     
 while True:
-    if button_a.is_pressed:
+    if button_a.is_pressed():
         display.show(Image.SKULL)
-        SayTheWords1("are you ok")
-    elif button_b.is_pressed:
+        SayTheWords1("are you okay")
+        sleep(100)
+    elif button_b.is_pressed():
         display.show(Image.DUCK)
         SayTheWords1("you are cool")
-    elif display.read_light_level() < 40:
+        sleep(100)
+    elif accelerometer.was_gesture('shake'):
         SayTheWords2()
     else:
         display.show(all_boxes)
